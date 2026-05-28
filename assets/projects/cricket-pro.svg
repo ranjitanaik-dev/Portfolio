@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" role="img" aria-label="Cricket Pro">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#g)"/>
+  <text x="300" y="165" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700" fill="#2dd4bf">Cricket Pro</text>
+  <text x="300" y="200" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="#5eead4">Add cricket-pro.png to replace</text>
+</svg>

@@ -508,6 +508,27 @@ button {
   gap: 14px;
 }
 
+.hero-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.hero-social-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.hero-social-link:hover {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-cyan);
+}
+
 /* --- Buttons --- */
 .btn {
   display: inline-flex;
@@ -753,30 +774,57 @@ button {
 }
 
 .project-card {
-  padding: 32px;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  overflow: hidden;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
 }
 
-.project-icon {
-  font-size: 2rem;
-  width: 56px;
-  height: 56px;
+.project-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-glass);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(168, 85, 247, 0.08));
+}
+
+.project-image-wrap.image-missing::after {
+  content: 'Add screenshot in assets/projects/';
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-sm);
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid var(--border-glass);
+  padding: 16px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
-[data-theme="light"] .project-icon {
-  background: rgba(37, 99, 235, 0.08);
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.06);
+}
+
+.project-body {
+  padding: 28px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
 }
 
 .project-title {
@@ -883,14 +931,15 @@ button {
 
 /* --- Achievements --- */
 .achievements-grid {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .achievement-card {
   padding: 40px 48px;
   text-align: center;
-  max-width: 560px;
+  height: 100%;
 }
 
 .achievement-card:hover {
@@ -921,9 +970,9 @@ button {
 /* --- Additional Projects --- */
 .additional-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  max-width: 800px;
+  max-width: 1000px;
   margin-inline: auto;
 }
 
@@ -1106,6 +1155,10 @@ button {
     justify-content: center;
   }
 
+  .hero-social {
+    justify-content: center;
+  }
+
   .hero-visual {
     order: -1;
   }
@@ -1157,6 +1210,7 @@ button {
 
   .skills-grid,
   .projects-grid,
+  .achievements-grid,
   .additional-grid {
     grid-template-columns: 1fr;
   }

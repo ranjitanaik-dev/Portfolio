@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" role="img" aria-label="ThailaVardhana">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#g)"/>
+  <text x="300" y="165" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="26" font-weight="700" fill="#166534">ThailaVardhana</text>
+  <text x="300" y="200" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="#15803d">Add thailavardhana.png to replace</text>
+</svg>

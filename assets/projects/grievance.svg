@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" role="img" aria-label="Grievance System">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ede9fe"/>
+      <stop offset="100%" stop-color="#ddd6fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#g)"/>
+  <text x="300" y="165" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="26" font-weight="700" fill="#5b21b6">Public Grievance</text>
+  <text x="300" y="200" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="#6d28d9">Add grievance.png to replace</text>
+</svg>
