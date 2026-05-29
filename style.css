@@ -937,25 +937,52 @@ button {
 }
 
 .achievement-card {
-  padding: 40px 48px;
-  text-align: center;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   height: 100%;
 }
 
 .achievement-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
 }
 
-.achievement-badge {
-  font-size: 3rem;
-  margin-bottom: 16px;
+.achievement-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-glass);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(168, 85, 247, 0.08));
+}
+
+.achievement-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.achievement-card:hover .achievement-image {
+  transform: scale(1.06);
+}
+
+.achievement-body {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
 }
 
 .achievement-card h3 {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -964,7 +991,8 @@ button {
 
 .achievement-card p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* --- Additional Projects --- */
@@ -977,25 +1005,58 @@ button {
 }
 
 .additional-card {
-  padding: 32px;
-  text-align: center;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
 }
 
 .additional-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+}
+
+.additional-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-glass);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08), rgba(168, 85, 247, 0.08));
+}
+
+.additional-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.additional-card:hover .additional-image {
+  transform: scale(1.06);
+}
+
+.additional-body {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
 }
 
 .additional-card h3 {
   font-family: var(--font-primary);
   font-size: 1.15rem;
   font-weight: 600;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   color: var(--accent-cyan);
 }
 
 .additional-card p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 /* --- Contact --- */
@@ -1244,7 +1305,13 @@ button {
     padding: 24px 20px;
   }
 
-  .achievement-card {
-    padding: 28px 24px;
+  .achievement-card,
+  .additional-card {
+    padding: 0;
+  }
+
+  .achievement-body,
+  .additional-body {
+    padding: 20px 24px;
   }
 }
