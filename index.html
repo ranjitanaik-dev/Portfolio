@@ -91,7 +91,8 @@
             <div class="hero-glow"></div>
             <div class="hero-avatar">
               <div class="avatar-inner">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <img id="profile-img" src="images/profile.png" alt="Ranjita Ganesh Naik" class="profile-image" onerror="if(this.src.indexOf('.png')!==-1){this.src='images/profile.jpg';}else if(this.src.indexOf('.jpg')!==-1){this.src='images/profile.jpeg';}else{this.style.display='none';document.getElementById('avatar-svg').style.display='block';}" />
+                <svg id="avatar-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display: none;">
                   <defs>
                     <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" style="stop-color:var(--accent-cyan)"/>

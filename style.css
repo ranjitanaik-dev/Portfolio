@@ -645,6 +645,23 @@ button {
   height: 160px;
 }
 
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-glass);
+  box-shadow: 0 0 20px var(--accent-glow);
+  display: block;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 25px var(--accent-cyan);
+}
+
 .avatar-label {
   font-size: 0.8rem;
   font-weight: 600;
