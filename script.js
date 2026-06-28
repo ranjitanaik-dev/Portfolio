@@ -268,4 +268,18 @@
       if (target) target.scrollIntoView({ behavior: 'smooth' });
     }, 1300);
   }
+
+  /* ---------- Project Card Click Handling ---------- */
+  document.querySelectorAll('.project-card').forEach((card) => {
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('a') || e.target.closest('button')) {
+        return;
+      }
+      const primaryBtn = card.querySelector('.project-link-btn.primary') || card.querySelector('.project-link-btn.secondary');
+      if (primaryBtn) {
+        window.open(primaryBtn.href, '_blank', 'noopener,noreferrer');
+      }
+    });
+  });
 })();
+
